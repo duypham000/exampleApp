@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>users</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <ng-container>
+    <div *ngFor="let u of users">
+      <!-- <h2 (click)="showDetail(u)">Tên {{ u.name }}</h2> -->
+      <h2 [navPush]="userPage" [navParams]="u">Tên {{ u.name }}</h2>
+      <p>Tuổi {{ u.age }}</p>
+    </div>
+    <button ion-button navPopToRoot>Home</button>
+  </ng-container>
+</ion-content>
+<ion-footer></ion-footer>
