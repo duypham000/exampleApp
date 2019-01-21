@@ -25,10 +25,6 @@ export class HomePage {
   }
   onNavToUsers(){
     var params = { key : this.users};
-    this.navCtrl.push(UsersPage, params, {
-      direction: 'back',
-      duration: 2000,
-      easing : 'ease-out'
-    })
+    this.navCtrl.push(UsersPage, params)
   }
 }
